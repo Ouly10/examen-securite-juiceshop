@@ -1,0 +1,24 @@
+# Configuration Semgrep pour l'analyse de sécurité
+# Examen Final - Sécurité des Données
+
+rules:
+  - id: sql-injection-detection
+    pattern: |
+      $QUERY = "..." + $INPUT + "..."
+    message: "SQL Injection potentielle - utiliser des requêtes paramétrées"
+    severity: ERROR
+    languages: [javascript]
+
+  - id: xss-detection
+    pattern: |
+      $ELEMENT.innerHTML = $INPUT
+    message: "XSS potentiel - utiliser textContent ou encoder la sortie"
+    severity: WARNING
+    languages: [javascript]
+
+  - id: hardcoded-secret
+    pattern: |
+      $KEY = "..."
+    message: "Secret potentiellement codé en dur - utiliser des variables d'environnement"
+    severity: ERROR
+    languages: [javascript, yaml]
