@@ -1,8 +1,8 @@
 # Examen Final — Sécurité des Données
 ## Application analysée : OWASP Juice Shop
-**Auteur** : Ton Prénom NOM
+**Auteur** : Ouleye kane
 **Formation** : Licence 3 Cybersécurité
-**Date** : 2024
+**Date** : 2026
 
 ---
 
